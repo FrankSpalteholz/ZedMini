@@ -15,7 +15,8 @@ def main():
     runtime = sl.RuntimeParameters()
 
     stream = sl.StreamingParameters()
-    stream.codec = sl.STREAMING_CODEC.H264
+    stream.codec = sl.STREAMING_CODEC.H265
+    # stream.codec = sl.STREAMING_CODEC.H264
     stream.bitrate = 4000
     status = cam.enable_streaming(stream)
     if status != sl.ERROR_CODE.SUCCESS:
